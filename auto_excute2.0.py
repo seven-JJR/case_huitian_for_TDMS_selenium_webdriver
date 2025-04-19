@@ -31,8 +31,6 @@ class auto_case:
         self.align = Alignment(horizontal='center', vertical='center', wrap_text=True)  # 设置对齐方式
 
     def enter_plan(self):
-        options=Options()
-        options.add_argument('--headless')
         self.driver.get("http://tdms.lenovo.com/tdms/loginAction!login.do")
         self.driver.maximize_window()
         element = WebDriverWait(self.driver, 1000).until(ec.presence_of_element_located((By.ID, 'username')))#最长等待1000s
